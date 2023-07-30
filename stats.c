@@ -9,13 +9,13 @@
  *
  *****************************************************************************/
 /**
- * @file <stats.c> 
- * @brief <application>
+ * @file <Add File Name> 
+ * @brief <Add Brief Description Here >
  *
- * <This is simple application that performs statistical analytics on a dataset.>
+ * <Add Extended Description Here>
  *
- * @author <Montaser Ismail>
- * @date <28\6\2023 >
+ * @author <Add FirsName LastName>
+ * @date <Add date >
  *
  */
 
