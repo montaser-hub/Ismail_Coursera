@@ -21,20 +21,69 @@
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
+//* Add Your Declarations and Function Comments here */
 
 /**
- * @brief <Add Brief Description of Function Here>
- *
- * <Add Extended Description Here>
- *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
+ * @brief <A function that prints the statistics of an array including minimum, maximum, mean, and median.>
+ * @param <test> <The input array>
+ * @param <length> <The length of the array>
+
+ * @return <void>
  */
+void print_statistics(unsigned char* test, unsigned int length);
 
 
+/**
+ * @brief <Given an array of data and a length, prints the array to the screen.>
+ * @param <test> <The input array>
+ * @param <length> <The length of the array>
+ */
+void print_array(unsigned char* test, unsigned int length); 
+
+
+/**
+ * @brief <Given an array of data and a length, returns the median value>
+ * @param <test> <The input array>
+ * @param <length> <The length of the array>
+ * @return The median value of the array
+ */	
+unsigned char find_median(unsigned char* test, unsigned int length); 
+	
+
+/**
+ * @brief < Given an array of data and a length, returns the mean>
+ * @param <test> <The input array>
+ * @param <length> <The length of the array>
+ * @return The mean value of the array
+ */
+unsigned char find_mean(unsigned char* test, unsigned int length); 
+	
+
+/**
+ * @brief <Given an array of data and a length, returns the maximum>
+ * @param <test> <The input array>
+ * @param <length> <The length of the array>
+ * @return The maximum value of the array
+ */
+unsigned char find_maximum(unsigned char* test, unsigned int length);
+
+
+/**
+ * @brief <Given an array of data and a length, returns the minimum>
+ * @param <test> <The input array>
+ * @param <length> <The length of the array>
+ * @return The minimum value of the array
+ */
+unsigned char find_minimum(unsigned char* test, unsigned int length);
+
+
+/**
+ * @brief <Given an array of data and a length, sorts the array from largest to smallest.>
+ *
+ * <The zeroth Element should be the largest value, and the last element (n-1) should be the smallest value.>
+ *
+ * @param <test> <The input array>
+ * @param <length> <The length of the array>
+ */
+void sort_array(unsigned char* test, unsigned int length); 
 #endif /* __STATS_H__ */

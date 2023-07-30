@@ -41,3 +41,42 @@ void main() {
 }
 
 /* Add other Implementation File Code Here */
+void print_statistics(unsigned char* test, unsigned int length)
+	
+	{
+
+	    /*Add function here*/
+
+	 }
+
+void print_array(unsigned char* test, unsigned int length)
+	
+	 {
+	     /*Add function here*/
+	  }
+
+unsigned char find_median(unsigned char* test, unsigned int length) 
+	
+	 {
+    	    /*Add function here*/
+	 }
+
+unsigned char find_mean(unsigned char* test, unsigned int length)
+	 {
+	     /*Add function here*/
+	 }
+
+unsigned char find_maximum(unsigned char* test, unsigned int length) 
+	{
+	     /*Add function here*/
+ 	}
+
+unsigned char find_minimum(unsigned char* test, unsigned int length)
+	{
+	    /*Add function here*/
+	}
+
+void sort_array(unsigned char* test, unsigned int length) 
+	{
+	     /*Add function here*/
+	}
