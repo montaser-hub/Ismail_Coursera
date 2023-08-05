@@ -36,47 +36,113 @@ void main() {
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
   /* Other Variable Declarations Go Here */
-  /* Statistics and Printing Functions Go Here */
+  unsigned int length = sizeof(test)/sizeof(test[0]);
 
-}
+  /* Statistics and Printing Functions Go Here */
+		print_array(test,length);
+  		printf("\n");
+
+  		print_statistics(test,length);						  	printf("\n");
+
+  		sort_array(test,length);							print_array(test, length);	
+	}
 
 /* Add other Implementation File Code Here */
 void print_statistics(unsigned char* test, unsigned int length)
 	
 	{
-
-	    /*Add function here*/
+		printf("Array statistics:\n");
+		printf("Minimum: %d\n", find_minimum(test, length));
+		printf("Maximum: %d\n", find_maximum(test, length));
+		printf("Mean: %d\n", find_mean(test, length));
+		printf("Median: %d\n", find_median(test, length));
 
 	 }
 
 void print_array(unsigned char* test, unsigned int length)
 	
 	 {
-	     /*Add function here*/
+	     	printf("Array: [");
+
+	     	for (unsigned int i = 0; i < length; i++)
+	                 {						  					printf("%d", test[i]);
+														if (i != length - 1)
+												   		{
+														   	  printf(", ");
+												                }
+										              		 }
+		    	     printf("]");
 	  }
 
 unsigned char find_median(unsigned char* test, unsigned int length) 
 	
 	 {
-    	    /*Add function here*/
+    	    sort_array(test, length);
+
+	    if (length % 2 == 0) 
+			    		
+		{
+	// if the length is even, return the average of the two middle values
+		 unsigned int index = length / 2;		  		 		 
+		 return (test[index - 1] + test[index])/2;
+		} 			        	  
+	    else	        	   		
+	    	{
+					        	   				// if the length is odd, return the middle value
+		 return test[length / 2];
+		}
 	 }
 
 unsigned char find_mean(unsigned char* test, unsigned int length)
 	 {
-	     /*Add function here*/
+	    unsigned int sum = 0;
+	    for (unsigned int i = 0; i < length; i++)
+		 {
+			 sum += test[i];
+		 }
+	    return sum / length;    
 	 }
 
 unsigned char find_maximum(unsigned char* test, unsigned int length) 
 	{
-	     /*Add function here*/
+	    unsigned char max = test[0];
+  	    for (unsigned int i = 1; i < length; i++) 
+	    {
+		    if (test[i] > max) 
+		    {
+			    max = test[i];
+		    }
+	    }
+	    return max;
  	}
 
 unsigned char find_minimum(unsigned char* test, unsigned int length)
 	{
-	    /*Add function here*/
+	    unsigned char min = test[0];
+	    for (unsigned int i = 1; i < length; i++) 
+	    {
+		    if (test[i] < min) 
+		    {
+			    min = test[i];
+		    }
+	    }
+	    return min;
 	}
 
 void sort_array(unsigned char* test, unsigned int length) 
 	{
-	     /*Add function here*/
+	     for (unsigned int i = 0; i < length - 1; i++) 
+     	      {
+	      	      for (unsigned int j = i + 1; j < length; j++)	 
+	      	      {
+	      		      if (test[j] > test[i])
+	      		      {
+				      // swap the values
+				      unsigned char temp = test[i];
+				      test[i] = test[j];
+				      test[j] = temp;
+			      }
+		      }
+	      }
+       	
 	}
